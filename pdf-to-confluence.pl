@@ -4,8 +4,17 @@ use warnings;
 # use REST::Client;
 
 my ($url, $token) = @ARGV;
-print "URL = '$url'";
-print "Token = '$token'";
+if (not defines $url)
+{
+  die "Keine URL angegeben\n";
+}
+if (defined $token)
+{
+  print "Save '$url' and '$token'\n";
+  exit;
+}
+
+print "Fetch '$name'\n";
 
 # my $rest_client = REST::Client->new();
 
