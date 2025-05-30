@@ -3,8 +3,10 @@ use strict;
 use warnings;
 use REST::Client;
 
-print(@ARGV);
+my ($url,$token) = @ARGV
+print "$url";
+print "$token";
 
 my $rest_client = REST::Client->new();
 
-print("Hello World");
+print "Hello World";
