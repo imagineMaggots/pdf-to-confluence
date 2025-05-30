@@ -3,8 +3,7 @@ use strict;
 use warnings;
 use REST::Client;
 
-my $pdf = \@ARGV;
-print("$pdf");
+print(@ARGV);
 
 my $rest_client = REST::Client->new();
 
