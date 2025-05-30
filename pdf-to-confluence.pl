@@ -3,7 +3,7 @@ use strict;
 use warnings;
 # use REST::Client;
 
-my ($url, $token) = @ARGV
+my ($url, $token) = @ARGV;
 print "URL = '$url'";
 print "Token = '$token'";
 
