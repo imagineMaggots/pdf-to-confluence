@@ -15,7 +15,7 @@ test = confluence.update_page(
 )
 
 create = confluence.create_page(
-    parent_id=None
-    title="New Page"
-    body="New Body"
+    parent_id=None,
+    title="New Page",
+    body="New Body",
 )
