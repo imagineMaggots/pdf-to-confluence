@@ -10,8 +10,8 @@ print(str(sys.argv))
 
 test = confluence.update_or_create(parent_id=2195457, title="Test", body="Test")
 
-page_id = confluence.get_page_by_title(space="PDFTOCONFL", title = "Test")
+page = confluence.get_page_by_title(space="PDFTOCONFL", title = "Test")
 
-print(page_id)
+print(str(page.id))
 
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page_id,content_type="application/pdf")
