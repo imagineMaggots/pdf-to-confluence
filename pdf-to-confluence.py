@@ -2,9 +2,10 @@
 import sys
 from atlassian import Confluence
 
+root = str(sys.argv[1])
 pdf = "Test.pdf"
 
-confluence = Confluence(url=str(sys.argv[1]), username=str(sys.argv[2]), password=str(sys.argv[3]))
+confluence = Confluence(url=root, username=str(sys.argv[2]), password=str(sys.argv[3]))
 
 print(str(sys.argv))
 
@@ -14,7 +15,7 @@ page = confluence.get_page_id(space="PDFTOCONFL", title = "Test")
 print(str(page))
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page,content_type="application/pdf")
 
-attachment = "attachments/"+str(page)+"/Test.pdf"
+attachment = root+"wiki/download/attachments/"+str(page)+"/Test.pdf"
 
 appending = f"""<p>
   <h2>Link zur PDF</h2>
