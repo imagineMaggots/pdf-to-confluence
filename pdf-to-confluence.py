@@ -15,7 +15,7 @@ test = confluence.update_page(
 )
 
 create = confluence.create_page(
-    parent_id=None,
+    space="PDF-TO-CONFLUENCE",
     title="New Page",
     body="New Body",
 )
