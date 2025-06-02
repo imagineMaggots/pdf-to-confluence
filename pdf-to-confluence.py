@@ -16,13 +16,10 @@ print(str(page))
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page,content_type="application/pdf")
 
 appending = f"""<p>
-  <h2>Link zur PDF</h2>
   <ac:link>
+    <viewpdf:page=Test|name=Test.pdf/>
     <ri:attachment ri:filename="Test.pdf"/>
   </ac:link>
-
-  <h2>Eingebettete PDF</h2>
-  <viewpdf:page=Test|name=Test.pdf/>
 </p>"""
 
 confluence.append_page(page, "Test", appending)
