@@ -18,7 +18,7 @@ test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page
 
 appending = f"""<p>
   <ac:link>
-    <ri:attachment ri_filename="Test.pdf"/>
+    <ri:attachment ri:filename="{Test.pdf}"/>
   </ac:link>
 </p>"""
 
