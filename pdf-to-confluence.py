@@ -24,10 +24,9 @@ appending = f"""<p>
   </ac:link>
 
   <h2>Eingebettete PDF</h2>
-  <object data="{attachment}" type="application/pdf" width="100%" height="500px">
-      <p>Unable to display PDF file.</p>
-  </object>
-  
+  <ac:pdf>
+      <ri:attachment ri:filename="Test.pdf"/>
+  </ac:pdf>
 </p>"""
 
 confluence.append_page(page, "Test", appending)
