@@ -15,3 +15,11 @@ page = confluence.get_page_id(space="PDFTOCONFL", title = "Test")
 print(str(page))
 
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page,content_type="application/pdf")
+
+appending = f"""<p>
+  <ac:link>
+    <ri:attachment ri_filename="Test.pdf"/>
+  </ac:link>
+</p>"""
+
+confluence.append_page(page, "Test", appending
