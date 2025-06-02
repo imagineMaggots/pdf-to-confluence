@@ -14,4 +14,8 @@ test = confluence.update_page(
     body="This is the new body",
 )
 
-print(test)
+create = confluence.create_page(
+    parent_id=None
+    title="New Page"
+    body="New Body"
+)
