@@ -22,4 +22,4 @@ appending = f"""<p>
   </ac:link>
 </p>"""
 
-confluence.append_page(page, "Test", appending
+confluence.append_page(page, "Test", appending)
