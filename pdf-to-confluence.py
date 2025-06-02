@@ -7,10 +7,10 @@ confluence = Confluence(url=str(sys.argv[1]), username=str(sys.argv[2]), passwor
 
 print(str(sys.argv))
 
-test = confluence.update_or_create(
-    parent_id=None,
-    page_id=2195457,
-    title="This is the title",
+test = confluence.update_or_create
+(
+    parent_id=2195457,
+    title="This",
     body="This is the new body",
 )
 
