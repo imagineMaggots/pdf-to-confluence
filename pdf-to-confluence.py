@@ -9,4 +9,4 @@ confluence = Confluence(url=str(sys.argv[1]), username=str(sys.argv[2]), passwor
 print(str(sys.argv))
 
 test = confluence.update_or_create(parent_id=2195457, title="Test", body="Test")
-test = confluence.attach_content(content=".pdf",name="Test.pdf",title="Test",content_type="application/pdf")
+test = confluence.attach_file(filename="pdf-to-confluence/",content=".pdf",name="Test.pdf",title="Test",content_type="application/pdf")
