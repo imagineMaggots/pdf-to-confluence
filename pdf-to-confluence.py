@@ -14,4 +14,4 @@ page_id = confluence.get_page_by_title(space="PDFTOCONFL", title = "Test")
 
 print(page_id)
 
-test = confluence.attach_file(filename="pdf-to-confluence/",name="Test.pdf",page_id=page_id,content_type="application/pdf")
+test = confluence.attach_file(filename=".",name="Test.pdf",page_id=page_id,content_type="application/pdf")
