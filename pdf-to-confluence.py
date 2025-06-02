@@ -22,7 +22,10 @@ appending = f"""<p>
   </ac:link>
 
   <h2>Eingebettete PDF</h2>
-  <viewpdf page="Test" name="Test.pdf">PDF konnte nicht geladen werden </viewpdf>
+  <ac:viewpdf>
+    <ri:page="Test" ri:name="Test.pdf"/>
+    PDF konnte nicht geladen werden
+  </ac:viewpage>
 </p>"""
 
 confluence.append_page(page, "Test", appending)
