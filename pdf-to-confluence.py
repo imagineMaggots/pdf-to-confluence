@@ -7,15 +7,10 @@ confluence = Confluence(url=str(sys.argv[1]), username=str(sys.argv[2]), passwor
 
 print(str(sys.argv))
 
-test = confluence.update_page(
+test = confluence.update_or_create(
     parent_id=None,
     page_id=2195457,
-    title="This is the new title",
+    title="This is the title",
     body="This is the new body",
 )
 
-create = confluence.create_page(
-    space="PDF-TO-CONFLUENCE",
-    title="New Page",
-    body="New Body",
-)
