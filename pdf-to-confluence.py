@@ -8,6 +8,8 @@ confluence = Confluence(
                             password=str(sys.argv[3])
                         )
 
+print(str(sys.argv))
+
 test = confluence.create_page(space="DEMO", title = "Test Titel", body = "Test Körper")
 
 print(test)
