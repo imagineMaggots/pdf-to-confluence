@@ -14,6 +14,7 @@ page = confluence.get_page_id(space="PDFTOCONFL", title = "Test")
 
 print(str(page))
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page,content_type="application/pdf")
+url = root + "wiki/downloads/attachments/" + str(page) + "/Test.pdf"
 
 appending = f"""<p>
   <h2>Link zur PDF</h2>
@@ -22,7 +23,7 @@ appending = f"""<p>
   </ac:link>
 
   <h2>Eingebettete PDF</h2>
-  <object data="wiki/downloads/attachments/2195457/Test.pdf" type="application/pdf" height="300" width="200">PDF konnte nicht geladen werden</object>
+  <iframe url="{url}" title="Test">PDF konnte nicht geladen werden</iframe>
 </p>"""
 
 confluence.append_page(page, "Test", appending)
