@@ -25,9 +25,9 @@ appending = f"""
   </ac:link>
 
   <h2>Eingebettete PDF</h2>
-  <iframe url="{url}" title="Test">
-    PDF konnte nicht geladen werden
-  </iframe>
+  <ac:viewpdf>
+    <ri:attachment ri:filename="Test.pdf" ri:content_type="application/pdf"/>
+  </ac:viewpdf>
 """
 
 print(appending)
