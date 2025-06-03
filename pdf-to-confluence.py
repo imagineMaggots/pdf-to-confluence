@@ -25,9 +25,9 @@ appending = f"""
   </ac:link>
 
   <h2>Eingebettete PDF</h2>
-  <ac:viewpdf>
-    <ri:attachment ri:filename="Test.pdf" ri:content_type="application/pdf"/>
-  </ac:viewpdf>
+  <ac:pdf>
+    <ri:attachment ri:filename="Test.pdf"/>
+  </ac:pdf>
 """
 
 print(appending)
