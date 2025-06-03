@@ -22,7 +22,7 @@ appending = f"""<p>
   </ac:link>
 
   <h2>Eingebettete PDF</h2>
-  <object data="./Test.pdf" type="application/pdf" height="300" width="200">PDF konnte nicht geladen werden</object>
+  <object data="wiki/downloads/attachments/2195457/Test.pdf" type="application/pdf" height="300" width="200">PDF konnte nicht geladen werden</object>
 </p>"""
 
 confluence.append_page(page, "Test", appending)
