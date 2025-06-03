@@ -15,10 +15,6 @@ page = confluence.get_page_id(space="PDFTOCONFL", title = "Test")
 print(str(page))
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page,content_type="application/pdf")
 
-attachments = confluence.get_attachments_from_content(page,filename="Test.pdf").
-print(attachments)
-
-
 appending = f"""
   <h2>Link zur PDF</h2>
   <ac:link>
