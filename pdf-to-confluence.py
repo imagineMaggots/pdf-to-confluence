@@ -21,7 +21,7 @@ appending = f"""
     <ri:attachment ri:filename="Test.pdf"/>
   </ac:link>
   <h2>Eingebettete PDF</h2>
-  <ac:image>
+  <ac:image ac:align="left" ac:width="750">
     <ri:attachment ri:filename="Test.pdf"/>
   </ac:image>
 """
