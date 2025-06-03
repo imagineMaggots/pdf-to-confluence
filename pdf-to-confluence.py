@@ -15,7 +15,7 @@ page = confluence.get_page_id(space="PDFTOCONFL", title = "Test")
 print(str(page))
 test = confluence.attach_file(filename="./Test.pdf",name="Test.pdf",page_id=page,content_type="application/pdf")
 
-attachments = confluence.get_attachments_from_content(page)
+attachments = confluence.get_attachments_from_content(page,filename="Test.pdf").
 print(attachments)
 
 
@@ -24,8 +24,11 @@ appending = f"""
   <ac:link>
     <ri:attachment ri:filename="Test.pdf"/>
   </ac:link>
+  <h2>Eingebettete PDF</h2>
+  <ac:image>
+    <ri:attachment ri:filename="Test.pdf"/>
+  </ac:image>
 """
-
 print(appending)
 
 confluence.append_page(page, "Test", appending)
